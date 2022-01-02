@@ -1,0 +1,54 @@
+ERROR - 2022-01-01 03:51:16 --> Table 'blog_ci4.visitors' doesn't exist
+CRITICAL - 2022-01-01 03:51:16 --> Table 'blog_ci4.visitors' doesn't exist
+#0 D:\laragon\www\ci4-hmvc\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `vi...', 0)
+#1 D:\laragon\www\ci4-hmvc\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `vi...')
+#2 D:\laragon\www\ci4-hmvc\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `vi...')
+#3 D:\laragon\www\ci4-hmvc\system\Database\BaseBuilder.php(1759): CodeIgniter\Database\BaseConnection->query('INSERT INTO `vi...', Array, false)
+#4 D:\laragon\www\ci4-hmvc\app\Libraries\VisitorTracker.php(139): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\laragon\www\ci4-hmvc\app\Libraries\VisitorTracker.php(87): App\Libraries\VisitorTracker->log_visitor()
+#6 D:\laragon\www\ci4-hmvc\system\Events\Events.php(149): App\Libraries\VisitorTracker->track_visitor()
+#7 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(408): CodeIgniter\Events\Events::trigger('post_controller...')
+#8 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\laragon\www\ci4-hmvc\system\CLI\Console.php(48): CodeIgniter\CodeIgniter->run()
+#10 D:\laragon\www\ci4-hmvc\spark(63): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2022-01-01 03:55:48 --> Unknown column 'no_of_visits' in 'field list'
+CRITICAL - 2022-01-01 03:55:48 --> Unknown column 'no_of_visits' in 'field list'
+#0 D:\laragon\www\ci4-hmvc\system\Database\MySQLi\Connection.php(292): mysqli->query('select max(no_o...', 0)
+#1 D:\laragon\www\ci4-hmvc\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('select max(no_o...')
+#2 D:\laragon\www\ci4-hmvc\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('select max(no_o...')
+#3 D:\laragon\www\ci4-hmvc\app\Libraries\VisitorTracker.php(156): CodeIgniter\Database\BaseConnection->query('select max(no_o...')
+#4 D:\laragon\www\ci4-hmvc\app\Libraries\VisitorTracker.php(87): App\Libraries\VisitorTracker->log_visitor()
+#5 D:\laragon\www\ci4-hmvc\system\Events\Events.php(149): App\Libraries\VisitorTracker->track_visitor()
+#6 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(408): CodeIgniter\Events\Events::trigger('post_controller...')
+#7 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\ci4-hmvc\system\CLI\Console.php(48): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\ci4-hmvc\spark(63): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2022-01-01 03:56:21 --> Duplicate entry '0' for key 'PRIMARY'
+CRITICAL - 2022-01-01 03:56:21 --> Duplicate entry '0' for key 'PRIMARY'
+#0 D:\laragon\www\ci4-hmvc\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `vi...', 0)
+#1 D:\laragon\www\ci4-hmvc\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `vi...')
+#2 D:\laragon\www\ci4-hmvc\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `vi...')
+#3 D:\laragon\www\ci4-hmvc\system\Database\BaseBuilder.php(1759): CodeIgniter\Database\BaseConnection->query('INSERT INTO `vi...', Array, false)
+#4 D:\laragon\www\ci4-hmvc\app\Libraries\VisitorTracker.php(139): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\laragon\www\ci4-hmvc\app\Libraries\VisitorTracker.php(87): App\Libraries\VisitorTracker->log_visitor()
+#6 D:\laragon\www\ci4-hmvc\system\Events\Events.php(149): App\Libraries\VisitorTracker->track_visitor()
+#7 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(408): CodeIgniter\Events\Events::trigger('post_controller...')
+#8 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\laragon\www\ci4-hmvc\system\CLI\Console.php(48): CodeIgniter\CodeIgniter->run()
+#10 D:\laragon\www\ci4-hmvc\spark(63): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2022-01-01 03:57:11 --> Unknown column 'access_date' in 'where clause'
+CRITICAL - 2022-01-01 03:57:11 --> Unknown column 'access_date' in 'where clause'
+#0 D:\laragon\www\ci4-hmvc\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT SUM(no_o...', 0)
+#1 D:\laragon\www\ci4-hmvc\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(no_o...')
+#2 D:\laragon\www\ci4-hmvc\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(no_o...')
+#3 D:\laragon\www\ci4-hmvc\app\Models\VisitorModel.php(14): CodeIgniter\Database\BaseConnection->query('SELECT SUM(no_o...')
+#4 D:\laragon\www\ci4-hmvc\app\Controllers\VisitorController.php(20): App\Models\VisitorModel->get_site_data_for_today()
+#5 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(824): App\Controllers\VisitorController->index()
+#6 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisitorController))
+#7 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\ci4-hmvc\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\ci4-hmvc\system\Commands\Server\rewrite.php(43): require_once('D:\\laragon\\www\\...')
+#10 {main}

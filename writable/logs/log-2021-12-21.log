@@ -1,0 +1,134 @@
+CRITICAL - 2021-12-21 00:24:20 --> Undefined variable: title
+#0 D:\laragon\www\ci4-hmvc\modules\Blog\Views\layouts\_header.php(7): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\laragon\\www\\...', 7, Array)
+#1 D:\laragon\www\ci4-hmvc\system\View\View.php(214): include('D:\\laragon\\www\\...')
+#2 D:\laragon\www\ci4-hmvc\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\laragon\www\ci4-hmvc\system\Common.php(1097): CodeIgniter\View\View->render('\\Modules\\Blog\\V...', Array, true)
+#4 D:\laragon\www\ci4-hmvc\modules\Blog\Controllers\Blog.php(28): view('\\Modules\\Blog\\V...')
+#5 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(824): Modules\Blog\Controllers\Blog->about()
+#6 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(Modules\Blog\Controllers\Blog))
+#7 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\ci4-hmvc\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\ci4-hmvc\system\Commands\Server\rewrite.php(43): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2021-12-21 20:16:35 --> Undefined variable: title
+#0 D:\laragon\www\ci4-hmvc\modules\Blog\Views\layouts\main.php(7): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\laragon\\www\\...', 7, Array)
+#1 D:\laragon\www\ci4-hmvc\system\View\View.php(214): include('D:\\laragon\\www\\...')
+#2 D:\laragon\www\ci4-hmvc\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\laragon\www\ci4-hmvc\system\View\View.php(230): CodeIgniter\View\View->render('\\Modules\\Blog\\V...', Array, true)
+#4 D:\laragon\www\ci4-hmvc\system\Common.php(1097): CodeIgniter\View\View->render('\\Modules\\Blog\\V...', Array, true)
+#5 D:\laragon\www\ci4-hmvc\app\Controllers\Home.php(14): view('\\Modules\\Blog\\V...')
+#6 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(824): App\Controllers\Home->index()
+#7 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\laragon\www\ci4-hmvc\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\laragon\www\ci4-hmvc\system\Commands\Server\rewrite.php(43): require_once('D:\\laragon\\www\\...')
+#11 {main}
+ERROR - 2021-12-21 20:39:12 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0, 1, 2, 3, 4, 5, 6) VALUES ('Fashion','Teknologi','Olahraga','Kesehatan','Gaya ' at line 1
+ERROR - 2021-12-21 20:42:14 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0, 1, 2, 3, 4, 5, 6) VALUES (('Fashion'), ('Teknologi'), ('Kesehatan'), ('Gaya H' at line 1
+CRITICAL - 2021-12-21 20:57:21 --> Invalid file: \Modules\Blog\Views\layouts\_header.php
+#0 D:\laragon\www\ci4-hmvc\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('\\Modules\\Blog\\V...')
+#1 D:\laragon\www\ci4-hmvc\system\View\View.php(432): CodeIgniter\View\View->render('\\Modules\\Blog\\V...', NULL, true)
+#2 D:\laragon\www\ci4-hmvc\modules\Post\Views\layouts\main.php(29): CodeIgniter\View\View->include('\\Modules\\Blog\\V...')
+#3 D:\laragon\www\ci4-hmvc\system\View\View.php(214): include('D:\\laragon\\www\\...')
+#4 D:\laragon\www\ci4-hmvc\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#5 D:\laragon\www\ci4-hmvc\system\View\View.php(230): CodeIgniter\View\View->render('\\Modules\\Post\\V...', Array, true)
+#6 D:\laragon\www\ci4-hmvc\system\Common.php(1097): CodeIgniter\View\View->render('\\Modules\\Post\\V...', Array, true)
+#7 D:\laragon\www\ci4-hmvc\app\Controllers\Home.php(14): view('\\Modules\\Post\\V...', Array)
+#8 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(824): App\Controllers\Home->index()
+#9 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\laragon\www\ci4-hmvc\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 D:\laragon\www\ci4-hmvc\system\Commands\Server\rewrite.php(43): require_once('D:\\laragon\\www\\...')
+#13 {main}
+ERROR - 2021-12-21 21:03:47 --> Table 'categories' already exists
+ERROR - 2021-12-21 21:05:49 --> Table 'categories' already exists
+CRITICAL - 2021-12-21 21:13:46 --> Call to undefined method Modules\Post\Controllers\Post::fake()
+#0 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(824): Modules\Post\Controllers\Post->about()
+#1 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(Modules\Post\Controllers\Post))
+#2 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\laragon\www\ci4-hmvc\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\laragon\www\ci4-hmvc\system\Commands\Server\rewrite.php(43): require_once('D:\\laragon\\www\\...')
+#5 {main}
+CRITICAL - 2021-12-21 21:14:34 --> Call to undefined method Modules\Post\Controllers\Post::faker()
+#0 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(824): Modules\Post\Controllers\Post->about()
+#1 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(Modules\Post\Controllers\Post))
+#2 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\laragon\www\ci4-hmvc\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\laragon\www\ci4-hmvc\system\Commands\Server\rewrite.php(43): require_once('D:\\laragon\\www\\...')
+#5 {main}
+CRITICAL - 2021-12-21 21:14:48 --> Call to undefined method Modules\Post\Controllers\Post::faker()
+#0 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(824): Modules\Post\Controllers\Post->about()
+#1 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(Modules\Post\Controllers\Post))
+#2 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\laragon\www\ci4-hmvc\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\laragon\www\ci4-hmvc\system\Commands\Server\rewrite.php(43): require_once('D:\\laragon\\www\\...')
+#5 {main}
+CRITICAL - 2021-12-21 21:14:49 --> Call to undefined method Modules\Post\Controllers\Post::faker()
+#0 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(824): Modules\Post\Controllers\Post->about()
+#1 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(Modules\Post\Controllers\Post))
+#2 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\laragon\www\ci4-hmvc\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\laragon\www\ci4-hmvc\system\Commands\Server\rewrite.php(43): require_once('D:\\laragon\\www\\...')
+#5 {main}
+CRITICAL - 2021-12-21 21:14:49 --> Call to undefined method Modules\Post\Controllers\Post::faker()
+#0 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(824): Modules\Post\Controllers\Post->about()
+#1 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(Modules\Post\Controllers\Post))
+#2 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\laragon\www\ci4-hmvc\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\laragon\www\ci4-hmvc\system\Commands\Server\rewrite.php(43): require_once('D:\\laragon\\www\\...')
+#5 {main}
+CRITICAL - 2021-12-21 21:14:50 --> Call to undefined method Modules\Post\Controllers\Post::faker()
+#0 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(824): Modules\Post\Controllers\Post->about()
+#1 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(Modules\Post\Controllers\Post))
+#2 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\laragon\www\ci4-hmvc\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\laragon\www\ci4-hmvc\system\Commands\Server\rewrite.php(43): require_once('D:\\laragon\\www\\...')
+#5 {main}
+CRITICAL - 2021-12-21 21:14:50 --> Call to undefined method Modules\Post\Controllers\Post::faker()
+#0 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(824): Modules\Post\Controllers\Post->about()
+#1 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(Modules\Post\Controllers\Post))
+#2 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\laragon\www\ci4-hmvc\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\laragon\www\ci4-hmvc\system\Commands\Server\rewrite.php(43): require_once('D:\\laragon\\www\\...')
+#5 {main}
+CRITICAL - 2021-12-21 21:24:47 --> Undefined property: Modules\Post\Controllers\Post::$faker
+#0 D:\laragon\www\ci4-hmvc\modules\Post\Controllers\Post.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\laragon\\www\\...', 14, Array)
+#1 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(824): Modules\Post\Controllers\Post->about()
+#2 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(Modules\Post\Controllers\Post))
+#3 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\laragon\www\ci4-hmvc\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\laragon\www\ci4-hmvc\system\Commands\Server\rewrite.php(43): require_once('D:\\laragon\\www\\...')
+#6 {main}
+ERROR - 2021-12-21 21:40:21 --> Table 'users' already exists
+CRITICAL - 2021-12-21 22:28:12 --> Too few arguments to function CodeIgniter\I18n\Time::parse(), 0 passed in D:\laragon\www\ci4-hmvc\modules\Post\Controllers\Post.php on line 14 and at least 1 expected
+#0 D:\laragon\www\ci4-hmvc\modules\Post\Controllers\Post.php(14): CodeIgniter\I18n\Time::parse()
+#1 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(824): Modules\Post\Controllers\Post->about()
+#2 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(Modules\Post\Controllers\Post))
+#3 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\laragon\www\ci4-hmvc\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\laragon\www\ci4-hmvc\system\Commands\Server\rewrite.php(43): require_once('D:\\laragon\\www\\...')
+#6 {main}
+CRITICAL - 2021-12-21 22:28:16 --> Too few arguments to function CodeIgniter\I18n\Time::parse(), 0 passed in D:\laragon\www\ci4-hmvc\modules\Post\Controllers\Post.php on line 14 and at least 1 expected
+#0 D:\laragon\www\ci4-hmvc\modules\Post\Controllers\Post.php(14): CodeIgniter\I18n\Time::parse()
+#1 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(824): Modules\Post\Controllers\Post->about()
+#2 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(Modules\Post\Controllers\Post))
+#3 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\laragon\www\ci4-hmvc\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\laragon\www\ci4-hmvc\system\Commands\Server\rewrite.php(43): require_once('D:\\laragon\\www\\...')
+#6 {main}
+CRITICAL - 2021-12-21 22:28:17 --> Undefined variable: time
+#0 D:\laragon\www\ci4-hmvc\modules\Post\Controllers\Post.php(16): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\laragon\\www\\...', 16, Array)
+#1 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(824): Modules\Post\Controllers\Post->about()
+#2 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(Modules\Post\Controllers\Post))
+#3 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\laragon\www\ci4-hmvc\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\laragon\www\ci4-hmvc\system\Commands\Server\rewrite.php(43): require_once('D:\\laragon\\www\\...')
+#6 {main}
+CRITICAL - 2021-12-21 22:28:18 --> Undefined variable: time
+#0 D:\laragon\www\ci4-hmvc\modules\Post\Controllers\Post.php(16): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\laragon\\www\\...', 16, Array)
+#1 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(824): Modules\Post\Controllers\Post->about()
+#2 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(Modules\Post\Controllers\Post))
+#3 D:\laragon\www\ci4-hmvc\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\laragon\www\ci4-hmvc\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\laragon\www\ci4-hmvc\system\Commands\Server\rewrite.php(43): require_once('D:\\laragon\\www\\...')
+#6 {main}
