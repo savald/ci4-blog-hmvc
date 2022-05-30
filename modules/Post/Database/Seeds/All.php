@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Database\Seeds;
+namespace Post\Database\Seeds;
 
 use CodeIgniter\Database\Seeder;
 
 class All extends Seeder
 {
-  public function run()
-  {
-    $this->call('Author');
+    public function run()
+    {
+    $this->call('Users');
     $this->call('Categories');
     $this->call('Post');
-  }
+    }
 }

@@ -1,54 +1,43 @@
 <?php
 
-namespace App\Database\Migrations;
+namespace Author\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class Posts extends Migration
+class AuthorsTable extends Migration
 {
   public function up()
   {
     $this->forge->addField([
       'id'          => [
         'type'           => 'INT',
-        'constraint'     => 20,
+        'constraint'     => 11,
         'unsigned'       => true,
         'auto_increment' => true,
       ],
-      'category_id'          => [
-        'type'           => 'INT',
-        'constraint'     => 1,
-        'unsigned'       => true,
+      'name'       => [
+        'type'       => 'VARCHAR',
+        'constraint' => '100',
       ],
-      'user_id'          => [
-        'type'           => 'INT',
-        'constraint'     => 20,
-        'unsigned'       => true,
+      'email'       => [
+        'type'       => 'VARCHAR',
+        'constraint' => '100',
       ],
-      'title'       => [
+      'password'       => [
+        'type'       => 'VARCHAR',
+        'constraint' => '100',
+      ],
+      'about'       => [
+        'type'       => 'TEXT',
+      ],
+      'role'       => [
+        'type'       => 'VARCHAR',
+        'constraint' => '100',
+        'default'        => 'author',
+      ],
+      'image'       => [
         'type'       => 'VARCHAR',
         'constraint' => '255',
-      ],
-      'slug'       => [
-        'type'       => 'VARCHAR',
-        'constraint' => '255',
-      ],
-      'excerpt'       => [
-        'type'       => 'VARCHAR',
-        'constraint' => '255',
-      ],
-      'body'       => [
-        'type'       => 'VARCHAR',
-        'constraint' => '255',
-      ],
-      'post_image'       => [
-        'type'       => 'VARCHAR',
-        'constraint' => '255',
-        'null' => true,
-      ],
-      'published_at'       => [
-        'type'       => 'datetime',
-        'null' => true,
       ],
       'created_at'       => [
         'type'       => 'datetime',
@@ -64,11 +53,11 @@ class Posts extends Migration
       ],
     ]);
     $this->forge->addKey('id', true);
-    $this->forge->createTable('posts');
+    $this->forge->createTable('authors');
   }
 
   public function down()
   {
-    $this->forge->dropTable('posts');
+    $this->forge->dropTable('authors');
   }
 }

@@ -7,7 +7,7 @@
   <title><?= $title; ?></title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="manifest" href="site.webmanifest">
+  <!-- <link rel="manifest" href="site.webmanifest"> -->
   <link rel="shortcut icon" type="image/x-icon" href="<?= base_url(); ?>/blog/img/favicon.ico">
 
   <!-- CSS here -->
@@ -26,9 +26,19 @@
 </head>
 
 <body>
-  <?= $this->include('\Modules\Post\Views\layouts\_header'); ?>
+  <?= $this->include('Post\Views\layouts\_header'); ?>
   <?= $this->renderSection('content') ?>
-  <?= $this->include('\Modules\Post\Views\layouts\_footer'); ?>
+  <?= $this->include('Post\Views\layouts\_footer'); ?>
+
+  <!-- Search model Begin -->
+  <div class="search-model-box">
+    <div class="d-flex align-items-center h-100 justify-content-center">
+      <div class="search-close-btn">+</div>
+      <form class="search-model-form">
+        <input type="text" id="search-input" placeholder="Searching key.....">
+      </form>
+    </div>
+  </div>
 
   <script src="<?= base_url(); ?>/blog/js/vendor/modernizr-3.5.0.min.js"></script>
   <!-- Jquery, Popper, Bootstrap -->

@@ -7,7 +7,7 @@
           <div class="row justify-content-between align-items-end mb-15">
             <div class="col-xl-4">
               <div class="section-tittle mb-30">
-                <h3>Whats New</h3>
+                <h3>What's New</h3>
               </div>
             </div>
             <div class="col-xl-8 col-md-9">
@@ -45,7 +45,7 @@
                             <div class="whates-caption">
                               <h4><a href="<?= $news->slug; ?>"><?= $news->title; ?></a></h4>
                               <span>by <?= $news->name; ?> - <?= date('d M Y', strtotime($news->published_at)); ?></span>
-                              <p><?= $news->body; ?></p>
+                              <p><?= $news->excerpt; ?>...</p>
                             </div>
                           </div>
                         <?php endforeach ?>
@@ -93,7 +93,6 @@
 
                 <!-- Teknologi Tab -->
                 <div class="tab-pane fade" id="nav-teknologi" role="tabpanel" aria-labelledby="nav-teknologi-tab">
-
                   <div class="row">
                     <!-- Left Details Caption -->
                     <div class="col-xl-6 col-lg-12">
@@ -106,7 +105,7 @@
                             <div class="whates-caption">
                               <h4><a href="<?= $news->slug; ?>"><?= $news->title; ?></a></h4>
                               <span>by <?= $news->name; ?> - <?= date('d M Y', strtotime($news->published_at)); ?></span>
-                              <p><?= $news->body; ?></p>
+                              <p><?= $news->excerpt; ?>...</p>
                             </div>
                           </div>
                         <?php endforeach ?>
@@ -118,6 +117,7 @@
                         </div>
                       <?php endif ?>
                     </div>
+
                     <!-- Right single caption -->
                     <div class="col-xl-6 col-lg-12">
                       <div class="row">
@@ -154,7 +154,6 @@
 
                 <!-- Kesehatan Tab -->
                 <div class="tab-pane fade" id="nav-kesehatan" role="tabpanel" aria-labelledby="nav-kesehatan-tab">
-
                   <div class="row">
                     <!-- Left Details Caption -->
                     <div class="col-xl-6 col-lg-12">
@@ -167,7 +166,7 @@
                             <div class="whates-caption">
                               <h4><a href="<?= $news->slug; ?>"><?= $news->title; ?></a></h4>
                               <span>by <?= $news->name; ?> - <?= date('d M Y', strtotime($news->published_at)); ?></span>
-                              <p><?= $news->body; ?></p>
+                              <p><?= $news->excerpt; ?>...</p>
                             </div>
                           </div>
                         <?php endforeach ?>
@@ -227,7 +226,7 @@
                             <div class="whates-caption">
                               <h4><a href="<?= $news->slug; ?>"><?= $news->title; ?></a></h4>
                               <span>by <?= $news->name; ?> - <?= date('d M Y', strtotime($news->published_at)); ?></span>
-                              <p><?= $news->body; ?></p>
+                              <p><?= $news->excerpt; ?>...</p>
                             </div>
                           </div>
                         <?php endforeach ?>
@@ -287,7 +286,7 @@
                             <div class="whates-caption">
                               <h4><a href="<?= $news->slug; ?>"><?= $news->title; ?></a></h4>
                               <span>by <?= $news->name; ?> - <?= date('d M Y', strtotime($news->published_at)); ?></span>
-                              <p><?= $news->body; ?></p>
+                              <p><?= $news->excerpt; ?>...</p>
                             </div>
                           </div>
                         <?php endforeach ?>
@@ -347,7 +346,7 @@
                             <div class="whates-caption">
                               <h4><a href="<?= $news->slug; ?>"><?= $news->title; ?></a></h4>
                               <span>by <?= $news->name; ?> - <?= date('d M Y', strtotime($news->published_at)); ?></span>
-                              <p><?= $news->body; ?></p>
+                              <p><?= $news->excerpt; ?>...</p>
                             </div>
                           </div>
                         <?php endforeach ?>
@@ -407,7 +406,7 @@
                             <div class="whates-caption">
                               <h4><a href="<?= $news->slug; ?>"><?= $news->title; ?></a></h4>
                               <span>by <?= $news->name; ?> - <?= date('d M Y', strtotime($news->published_at)); ?></span>
-                              <p><?= $news->body; ?></p>
+                              <p><?= $news->excerpt; ?>...</p>
                             </div>
                           </div>
                         <?php endforeach ?>

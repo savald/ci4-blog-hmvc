@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Database\Migrations;
+namespace Post\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class Categories extends Migration
+class CategoriesTable extends Migration
 {
   public function up()
   {

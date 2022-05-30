@@ -43,20 +43,30 @@ class PostModel extends Model
   public function getNewest()
   {
     return $this->join('categories c', 'c.id=posts.category_id', 'left')
-      ->join('users u', 'u.id=posts.user_id', 'left')
-      ->select('title, body, c.category, u.name, slug, published_at, post_image')
+      ->join('authors au', 'au.id=posts.author_id', 'left')
+      ->select('title, body, excerpt, c.category, au.name, slug, published_at, post_image')
       ->orderBy('published_at', 'DESC')
       ->get(5)
       ->getResult();
+  }
+
+  public function getDetail($slug)
+  {
+    return $this->join('categories c', 'c.id=posts.category_id', 'left')
+      ->join('authors au', 'au.id=posts.author_id', 'left')
+      ->select('title, body, c.category, au.name, au.about, slug, published_at, post_image')
+      ->where('slug', $slug)
+      ->get()
+      ->getRow();
   }
 
   public function getByCategory($category = null)
   {
     return $this
       ->join('categories c', 'c.id=posts.category_id', 'left')
-      ->join('users u', 'u.id=posts.user_id', 'left')
+      ->join('authors au', 'au.id=posts.author_id', 'left')
       ->where('c.category', $category)
-      ->select('title, body, c.category, u.name, slug, published_at, post_image')
+      ->select('title, body, excerpt, c.category, au.name, slug, published_at, post_image')
       ->orderBy('published_at', 'DESC')
       ->get(5)
       ->getResult();

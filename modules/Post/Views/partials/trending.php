@@ -13,7 +13,7 @@
                     <img src="<?= base_url(); ?>/blog/img/trending/trending_top2.jpg" alt="">
                     <div class="trend-top-cap">
                       <span class="bgr" data-animation="fadeInUp" data-delay=".2s" data-duration="1000ms"><?= $new->category; ?></span>
-                      <h2><a href="latest_news.html" data-animation="fadeInUp" data-delay=".4s" data-duration="1000ms"><?= $new->title; ?></a></h2>
+                      <h2><a href="<?= site_url('detail/' . $new->slug); ?>" data-animation="fadeInUp" data-delay=".4s" data-duration="1000ms"><?= $new->title; ?></a></h2>
                       <p data-animation="fadeInUp" data-delay=".6s" data-duration="1000ms">by <?= $new->name; ?> - <?= date('d M Y', strtotime($new->published_at)); ?></p>
                     </div>
                   </div>
@@ -34,7 +34,7 @@
                     <img src="<?= base_url(); ?>/blog/img/trending/trending_top3.jpg" alt="">
                     <div class="trend-top-cap trend-top-cap2">
                       <span class="<?php bgCategory($new->category) ?>"><?= $new->category; ?></span>
-                      <h2><a href="latest_news.html"><?= $new->title; ?></a></h2>
+                      <h2><a href="<?= site_url('detail/' . $new->slug); ?>"><?= $new->title; ?></a></h2>
                       <p>by <?= $new->name; ?> - <?= date('d M Y', strtotime($new->published_at)); ?></p>
                     </div>
                   </div>

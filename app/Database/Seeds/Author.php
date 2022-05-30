@@ -4,7 +4,7 @@ namespace App\Database\Seeds;
 
 use CodeIgniter\Database\Seeder;
 
-class Users extends Seeder
+class Author extends Seeder
 {
   public function run()
   {
@@ -15,9 +15,10 @@ class Users extends Seeder
         'name' => $faker->name,
         'email' => $faker->email,
         'password' => password_hash('test', PASSWORD_BCRYPT),
+        'about' => $faker->paragraph()
       ];
 
-      $this->db->table('users')->insert($data);
+      $this->db->table('authors')->insert($data);
     }
   }
 }
