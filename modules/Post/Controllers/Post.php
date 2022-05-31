@@ -31,7 +31,37 @@ class Post extends BaseController
       'olahraga'    => $this->postModel->getByCategory('Olahraga'),
     ];
 
-    // dd($data['fashion']);
+
+    foreach ($data['newest'] as $post) {
+      switch ($post->category) {
+        case 'Fashion':
+          $category = 'fashion';
+          break;
+        case 'Teknologi':
+          $category = 'technology';
+          break;
+        case 'Kesehatan':
+          $category = 'health';
+          break;
+        case 'Gaya Hidup':
+          $category = 'lifestyle';
+          break;
+        case 'Bisnis':
+          $category = 'business';
+          break;
+        case 'Hiburan':
+          $category = 'entertainment';
+          break;
+        case 'Olahraga':
+          $category = 'sport';
+          break;
+
+        default:
+          $category = null;
+          break;
+      }
+      $post->post_image = "https://source.unsplash.com/random/800x800/?$category";
+    }
 
     return view('Post\Views\index', $data);
   }

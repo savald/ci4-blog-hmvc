@@ -43,7 +43,7 @@
                               <img src="<?= base_url(); ?>/blog/img/gallery/whats_news_details1.png" alt="">
                             </div>
                             <div class="whates-caption">
-                              <h4><a href="<?= $news->slug; ?>"><?= $news->title; ?></a></h4>
+                              <h4><a href="<?= site_url('detail/' . $news->slug); ?>"><?= $news->title; ?></a></h4>
                               <span>by <?= $news->name; ?> - <?= date('d M Y', strtotime($news->published_at)); ?></span>
                               <p><?= $news->excerpt; ?>...</p>
                             </div>
@@ -70,7 +70,7 @@
                                 </div>
                                 <div class="whats-right-cap">
                                   <span class="<?= color(); ?>"><?= $news->category; ?></span>
-                                  <h4><a href="<?= $news->slug; ?>"><?= $news->title; ?></a></h4>
+                                  <h4><a href="<?= site_url('detail/' . $news->slug); ?>"><?= $news->title; ?></a></h4>
                                   <p><?= date('d M Y', strtotime($news->published_at)); ?></p>
                                 </div>
                               </div>
@@ -103,7 +103,7 @@
                               <img src="<?= base_url(); ?>/blog/img/gallery/whats_news_details1.png" alt="">
                             </div>
                             <div class="whates-caption">
-                              <h4><a href="<?= $news->slug; ?>"><?= $news->title; ?></a></h4>
+                              <h4><a href="<?= site_url('detail/' . $news->slug); ?>"><?= $news->title; ?></a></h4>
                               <span>by <?= $news->name; ?> - <?= date('d M Y', strtotime($news->published_at)); ?></span>
                               <p><?= $news->excerpt; ?>...</p>
                             </div>
@@ -131,7 +131,7 @@
                                 </div>
                                 <div class="whats-right-cap">
                                   <span class="<?= color(); ?>"><?= $news->category; ?></span>
-                                  <h4><a href="<?= $news->slug; ?>"><?= $news->title; ?></a></h4>
+                                  <h4><a href="<?= site_url('detail/' . $news->slug); ?>"><?= $news->title; ?></a></h4>
                                   <p><?= date('d M Y', strtotime($news->published_at)); ?></p>
                                 </div>
                               </div>
@@ -164,7 +164,7 @@
                               <img src="<?= base_url(); ?>/blog/img/gallery/whats_news_details1.png" alt="">
                             </div>
                             <div class="whates-caption">
-                              <h4><a href="<?= $news->slug; ?>"><?= $news->title; ?></a></h4>
+                              <h4><a href="<?= site_url('detail/' . $news->slug); ?>"><?= $news->title; ?></a></h4>
                               <span>by <?= $news->name; ?> - <?= date('d M Y', strtotime($news->published_at)); ?></span>
                               <p><?= $news->excerpt; ?>...</p>
                             </div>
@@ -191,7 +191,7 @@
                                 </div>
                                 <div class="whats-right-cap">
                                   <span class="<?= color(); ?>"><?= $news->category; ?></span>
-                                  <h4><a href="<?= $news->slug; ?>"><?= $news->title; ?></a></h4>
+                                  <h4><a href="<?= site_url('detail/' . $news->slug); ?>"><?= $news->title; ?></a></h4>
                                   <p><?= date('d M Y', strtotime($news->published_at)); ?></p>
                                 </div>
                               </div>
@@ -224,7 +224,7 @@
                               <img src="<?= base_url(); ?>/blog/img/gallery/whats_news_details1.png" alt="">
                             </div>
                             <div class="whates-caption">
-                              <h4><a href="<?= $news->slug; ?>"><?= $news->title; ?></a></h4>
+                              <h4><a href="<?= site_url('detail/' . $news->slug); ?>"><?= $news->title; ?></a></h4>
                               <span>by <?= $news->name; ?> - <?= date('d M Y', strtotime($news->published_at)); ?></span>
                               <p><?= $news->excerpt; ?>...</p>
                             </div>
@@ -251,7 +251,7 @@
                                 </div>
                                 <div class="whats-right-cap">
                                   <span class="<?= color(); ?>"><?= $news->category; ?></span>
-                                  <h4><a href="<?= $news->slug; ?>"><?= $news->title; ?></a></h4>
+                                  <h4><a href="<?= site_url('detail/' . $news->slug); ?>"><?= $news->title; ?></a></h4>
                                   <p><?= date('d M Y', strtotime($news->published_at)); ?></p>
                                 </div>
                               </div>
@@ -284,7 +284,7 @@
                               <img src="<?= base_url(); ?>/blog/img/gallery/whats_news_details1.png" alt="">
                             </div>
                             <div class="whates-caption">
-                              <h4><a href="<?= $news->slug; ?>"><?= $news->title; ?></a></h4>
+                              <h4><a href="<?= site_url('detail/' . $news->slug); ?>"><?= $news->title; ?></a></h4>
                               <span>by <?= $news->name; ?> - <?= date('d M Y', strtotime($news->published_at)); ?></span>
                               <p><?= $news->excerpt; ?>...</p>
                             </div>
@@ -311,7 +311,7 @@
                                 </div>
                                 <div class="whats-right-cap">
                                   <span class="<?= color(); ?>"><?= $news->category; ?></span>
-                                  <h4><a href="<?= $news->slug; ?>"><?= $news->title; ?></a></h4>
+                                  <h4><a href="<?= site_url('detail/' . $news->slug); ?>"><?= $news->title; ?></a></h4>
                                   <p><?= date('d M Y', strtotime($news->published_at)); ?></p>
                                 </div>
                               </div>
@@ -344,7 +344,7 @@
                               <img src="<?= base_url(); ?>/blog/img/gallery/whats_news_details1.png" alt="">
                             </div>
                             <div class="whates-caption">
-                              <h4><a href="<?= $news->slug; ?>"><?= $news->title; ?></a></h4>
+                              <h4><a href="<?= site_url('detail/' . $news->slug); ?>"><?= $news->title; ?></a></h4>
                               <span>by <?= $news->name; ?> - <?= date('d M Y', strtotime($news->published_at)); ?></span>
                               <p><?= $news->excerpt; ?>...</p>
                             </div>
@@ -371,7 +371,7 @@
                                 </div>
                                 <div class="whats-right-cap">
                                   <span class="<?= color(); ?>"><?= $news->category; ?></span>
-                                  <h4><a href="<?= $news->slug; ?>"><?= $news->title; ?></a></h4>
+                                  <h4><a href="<?= site_url('detail/' . $news->slug); ?>"><?= $news->title; ?></a></h4>
                                   <p><?= date('d M Y', strtotime($news->published_at)); ?></p>
                                 </div>
                               </div>
@@ -404,7 +404,7 @@
                               <img src="<?= base_url(); ?>/blog/img/gallery/whats_news_details1.png" alt="">
                             </div>
                             <div class="whates-caption">
-                              <h4><a href="<?= $news->slug; ?>"><?= $news->title; ?></a></h4>
+                              <h4><a href="<?= site_url('detail/' . $news->slug); ?>"><?= $news->title; ?></a></h4>
                               <span>by <?= $news->name; ?> - <?= date('d M Y', strtotime($news->published_at)); ?></span>
                               <p><?= $news->excerpt; ?>...</p>
                             </div>
@@ -431,7 +431,7 @@
                                 </div>
                                 <div class="whats-right-cap">
                                   <span class="<?= color(); ?>"><?= $news->category; ?></span>
-                                  <h4><a href="<?= $news->slug; ?>"><?= $news->title; ?></a></h4>
+                                  <h4><a href="<?= site_url('detail/' . $news->slug); ?>"><?= $news->title; ?></a></h4>
                                   <p><?= date('d M Y', strtotime($news->published_at)); ?></p>
                                 </div>
                               </div>
@@ -517,7 +517,7 @@
               <img src="<?= base_url(); ?>/blog/img/gallery/most_recent.png" alt="">
               <div class="most-recent-cap">
                 <span class="bgbeg"><?= $newest[0]->category; ?></span>
-                <h4><a href="latest_news.html"><?= $newest[0]->title; ?></a></h4>
+                <h4><a href="<?= site_url('detail/' . $newest[0]->slug); ?>"><?= $newest[0]->title; ?></a></h4>
                 <p><?= $newest[0]->name; ?> | <?= date('d M Y', strtotime($newest[0]->published_at)); ?></p>
               </div>
             </div>
@@ -526,10 +526,10 @@
           <?php foreach (array_slice($newest, 1, 2) as $news) : ?>
             <div class="most-recent-single">
               <div class="most-recent-images">
-                <img src="<?= base_url(); ?>/blog/img/gallery/most_recent1.png" alt="">
+                <img src="<?= $news->post_image ?>" alt="">
               </div>
               <div class="most-recent-capt">
-                <h4><a href="latest_news.html"><?= $news->title ?></a></h4>
+                <h4><a href="<?= site_url('detail/' . $news->slug); ?>"><?= $news->title ?></a></h4>
                 <p><?= $news->name; ?> | <?= date('d M Y', strtotime($news->published_at)); ?></p>
               </div>
             </div>
