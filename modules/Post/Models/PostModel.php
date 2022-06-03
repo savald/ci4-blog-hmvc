@@ -40,7 +40,7 @@ class PostModel extends Model
   protected $beforeDelete   = [];
   protected $afterDelete    = [];
 
-  public function getNewest()
+  public function getPostNewest()
   {
     return $this->join('categories c', 'c.id=posts.category_id', 'left')
       ->join('authors au', 'au.id=posts.author_id', 'left')
@@ -50,7 +50,7 @@ class PostModel extends Model
       ->getResult();
   }
 
-  public function getDetail($slug)
+  public function getPostDetail($slug)
   {
     return $this->join('categories c', 'c.id=posts.category_id', 'left')
       ->join('authors au', 'au.id=posts.author_id', 'left')
@@ -60,7 +60,7 @@ class PostModel extends Model
       ->getRow();
   }
 
-  public function getByCategory($category = null)
+  public function getPostByCategory($category = null)
   {
     return $this
       ->join('categories c', 'c.id=posts.category_id', 'left')
@@ -68,7 +68,7 @@ class PostModel extends Model
       ->where('c.category', $category)
       ->select('title, body, excerpt, c.category, au.name, slug, published_at, post_image')
       ->orderBy('published_at', 'DESC')
-      ->get(5)
+      ->get(4)
       ->getResult();
   }
 }

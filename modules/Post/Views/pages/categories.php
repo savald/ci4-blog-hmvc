@@ -1,4 +1,4 @@
-  <?= $this->extend('\Modules\Post\Views\layouts\main') ?>
+  <?= $this->extend('\Modules\Post\Views\main') ?>
 
   <?= $this->section('content') ?>
 

@@ -16,7 +16,7 @@
                 <nav>
                   <div class="nav nav-tabs" id="nav-tab" role="tablist">
                     <?php foreach ($categories as $category) : ?>
-                      <a class="nav-item nav-link <?= strtolower($category->category) == 'fashion' ? 'active' : ''; ?>" id="nav-<?= strtolower(str_replace(" ", "-", "$category->category")) ?>-tab" data-toggle="tab" href="#nav-<?= strtolower(str_replace(" ", "-", "$category->category")) ?>" role="tab" aria-controls="nav-<?= strtolower(str_replace(" ", "-", "$category->category")) ?>" aria-selected="<?= 'fashion' == 'fashion' ? 'true' : 'false'; ?>"><?= $category->category; ?></a>
+                      <a class="nav-item nav-link <?= strtolower($category->category) == 'fashion' ? 'active' : ''; ?>" id="nav-<?= strtolower(str_replace(" ", "_", "$category->category")) ?>-tab" data-toggle="tab" href="#nav-<?= strtolower(str_replace(" ", "_", "$category->category")) ?>" role="tab" aria-controls="nav-<?= strtolower(str_replace(" ", "_", "$category->category")) ?>" aria-selected="<?= 'fashion' == 'fashion' ? 'true' : 'false'; ?>"><?= $category->category; ?></a>
                     <?php endforeach ?>
                   </div>
                 </nav>
@@ -32,425 +32,69 @@
               <div class="tab-content" id="nav-tabContent">
 
                 <!-- Fashion Tab -->
-                <div class="tab-pane fade show active" id="nav-fashion" role="tabpanel" aria-labelledby="nav-fashion-tab">
-                  <div class="row">
-                    <!-- Left Details Caption -->
-                    <div class="col-xl-6 col-lg-12">
-                      <?php if ($fashion) : ?>
-                        <?php foreach (array_slice($fashion, 0, 1) as $news) : ?>
-                          <div class="whats-news-single mb-40 mb-40">
-                            <div class="whates-img">
-                              <img src="<?= base_url(); ?>/blog/img/gallery/whats_news_details1.png" alt="">
-                            </div>
-                            <div class="whates-caption">
-                              <h4><a href="<?= site_url('detail/' . $news->slug); ?>"><?= $news->title; ?></a></h4>
-                              <span>by <?= $news->name; ?> - <?= date('d M Y', strtotime($news->published_at)); ?></span>
-                              <p><?= $news->excerpt; ?>...</p>
-                            </div>
-                          </div>
-                        <?php endforeach ?>
-                      <?php else : ?>
-                        <div class="whats-news-single mb-40 mb-40">
-                          <div class="whates-caption">
-                            <h4>No post yet</h4>
-                          </div>
-                        </div>
-                      <?php endif ?>
-                    </div>
-                    <!-- Right single caption -->
-                    <div class="col-xl-6 col-lg-12">
-                      <div class="row">
-                        <!-- single -->
-                        <?php if (count($fashion) > 1) : ?>
-                          <?php foreach (array_slice($fashion, 1, 4) as $news) : ?>
-                            <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
-                              <div class="whats-right-single mb-20">
-                                <div class="whats-right-img">
-                                  <img src="<?= base_url(); ?>/blog/img/gallery/whats_right_img1.png" alt="">
-                                </div>
-                                <div class="whats-right-cap">
-                                  <span class="<?= color(); ?>"><?= $news->category; ?></span>
-                                  <h4><a href="<?= site_url('detail/' . $news->slug); ?>"><?= $news->title; ?></a></h4>
-                                  <p><?= date('d M Y', strtotime($news->published_at)); ?></p>
-                                </div>
+                <?php foreach ($postsTab as $tab) : ?>
+                  <?php dd(array_keys($tab))  ?>
+                  <div class="tab-pane fade <?= array_keys($tab) === 0 ? 'show active' : ''; ?>" id="nav-<?= array_keys($tab); ?>" role="tabpanel" aria-labelledby="nav-<?= array_keys($tab); ?>-tab">
+                    <div class="row">
+
+                      <!-- Left Details Caption -->
+                      <div class="col-xl-6 col-lg-12">
+                        <?php if (array_keys($tab)) : ?>
+                          <?php foreach (array_slice($tab, 0, 1) as $news) : ?>
+                            <div class="whats-news-single mb-40 mb-40">
+                              <div class="whates-img">
+                                <img src="<?= $news->post_image == null ? 'https://source.unsplash.com/random/800x800/?fashion' : $news->post_image; ?>" alt="">
+                              </div>
+                              <div class="whates-caption">
+                                <h4><a href="<?= site_url('detail/' . $news->slug); ?>"><?= $news->title; ?></a></h4>
+                                <span>by <?= $news->name; ?> - <?= date('d M Y', strtotime($news->published_at)); ?></span>
+                                <p><?= $news->excerpt; ?>...</p>
                               </div>
                             </div>
                           <?php endforeach ?>
                         <?php else : ?>
-                          <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
-                            <div class="whats-right-single mb-20">
-                              <div class="whats-right-cap">
-                                <h4>No more post</h4>
-                              </div>
+                          <div class="whats-news-single mb-40 mb-40">
+                            <div class="whates-caption">
+                              <h4>No post yet</h4>
                             </div>
                           </div>
                         <?php endif ?>
                       </div>
-                    </div>
-                  </div>
 
-                </div>
-
-                <!-- Teknologi Tab -->
-                <div class="tab-pane fade" id="nav-teknologi" role="tabpanel" aria-labelledby="nav-teknologi-tab">
-                  <div class="row">
-                    <!-- Left Details Caption -->
-                    <div class="col-xl-6 col-lg-12">
-                      <?php if ($teknologi) : ?>
-                        <?php foreach (array_slice($teknologi, 0, 1) as $news) : ?>
-                          <div class="whats-news-single mb-40 mb-40">
-                            <div class="whates-img">
-                              <img src="<?= base_url(); ?>/blog/img/gallery/whats_news_details1.png" alt="">
-                            </div>
-                            <div class="whates-caption">
-                              <h4><a href="<?= site_url('detail/' . $news->slug); ?>"><?= $news->title; ?></a></h4>
-                              <span>by <?= $news->name; ?> - <?= date('d M Y', strtotime($news->published_at)); ?></span>
-                              <p><?= $news->excerpt; ?>...</p>
-                            </div>
-                          </div>
-                        <?php endforeach ?>
-                      <?php else : ?>
-                        <div class="whats-news-single mb-40 mb-40">
-                          <div class="whates-caption">
-                            <h4>No post yet</h4>
-                          </div>
-                        </div>
-                      <?php endif ?>
-                    </div>
-
-                    <!-- Right single caption -->
-                    <div class="col-xl-6 col-lg-12">
-                      <div class="row">
-                        <!-- single -->
-                        <?php if (count($teknologi) > 1) : ?>
-                          <?php foreach (array_slice($teknologi, 1, 4) as $news) : ?>
+                      <!-- Right single caption -->
+                      <div class="col-xl-6 col-lg-12">
+                        <div class="row">
+                          <!-- single -->
+                          <?php if (count($tab) > 1) : ?>
+                            <?php foreach (array_slice($tab, 1, 4) as $news) : ?>
+                              <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
+                                <div class="whats-right-single mb-20">
+                                  <div class="whats-right-img">
+                                    <img src="<?= $news->post_image == null ? 'https://source.unsplash.com/random/800x800/?fashion' : $news->post_image; ?>" alt="">
+                                  </div>
+                                  <div class="whats-right-cap">
+                                    <span class="<?= color(); ?>"><?= $news->category; ?></span>
+                                    <h4><a href="<?= site_url('detail/' . $news->slug); ?>"><?= $news->title; ?></a></h4>
+                                    <p><?= date('d M Y', strtotime($news->published_at)); ?></p>
+                                  </div>
+                                </div>
+                              </div>
+                            <?php endforeach ?>
+                          <?php else : ?>
                             <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                               <div class="whats-right-single mb-20">
-                                <div class="whats-right-img">
-                                  <img src="<?= base_url(); ?>/blog/img/gallery/whats_right_img1.png" alt="">
-                                </div>
                                 <div class="whats-right-cap">
-                                  <span class="<?= color(); ?>"><?= $news->category; ?></span>
-                                  <h4><a href="<?= site_url('detail/' . $news->slug); ?>"><?= $news->title; ?></a></h4>
-                                  <p><?= date('d M Y', strtotime($news->published_at)); ?></p>
+                                  <h4>No more post</h4>
                                 </div>
                               </div>
                             </div>
-                          <?php endforeach ?>
-                        <?php else : ?>
-                          <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
-                            <div class="whats-right-single mb-20">
-                              <div class="whats-right-cap">
-                                <h4>No more post</h4>
-                              </div>
-                            </div>
-                          </div>
-                        <?php endif ?>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-
-                <!-- Kesehatan Tab -->
-                <div class="tab-pane fade" id="nav-kesehatan" role="tabpanel" aria-labelledby="nav-kesehatan-tab">
-                  <div class="row">
-                    <!-- Left Details Caption -->
-                    <div class="col-xl-6 col-lg-12">
-                      <?php if ($kesehatan) : ?>
-                        <?php foreach (array_slice($kesehatan, 0, 1) as $news) : ?>
-                          <div class="whats-news-single mb-40 mb-40">
-                            <div class="whates-img">
-                              <img src="<?= base_url(); ?>/blog/img/gallery/whats_news_details1.png" alt="">
-                            </div>
-                            <div class="whates-caption">
-                              <h4><a href="<?= site_url('detail/' . $news->slug); ?>"><?= $news->title; ?></a></h4>
-                              <span>by <?= $news->name; ?> - <?= date('d M Y', strtotime($news->published_at)); ?></span>
-                              <p><?= $news->excerpt; ?>...</p>
-                            </div>
-                          </div>
-                        <?php endforeach ?>
-                      <?php else : ?>
-                        <div class="whats-news-single mb-40 mb-40">
-                          <div class="whates-caption">
-                            <h4>No post yet</h4>
-                          </div>
+                          <?php endif ?>
                         </div>
-                      <?php endif ?>
-                    </div>
-                    <!-- Right single caption -->
-                    <div class="col-xl-6 col-lg-12">
-                      <div class="row">
-                        <!-- single -->
-                        <?php if (count($kesehatan) > 1) : ?>
-                          <?php foreach (array_slice($kesehatan, 1, 4) as $news) : ?>
-                            <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
-                              <div class="whats-right-single mb-20">
-                                <div class="whats-right-img">
-                                  <img src="<?= base_url(); ?>/blog/img/gallery/whats_right_img1.png" alt="">
-                                </div>
-                                <div class="whats-right-cap">
-                                  <span class="<?= color(); ?>"><?= $news->category; ?></span>
-                                  <h4><a href="<?= site_url('detail/' . $news->slug); ?>"><?= $news->title; ?></a></h4>
-                                  <p><?= date('d M Y', strtotime($news->published_at)); ?></p>
-                                </div>
-                              </div>
-                            </div>
-                          <?php endforeach ?>
-                        <?php else : ?>
-                          <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
-                            <div class="whats-right-single mb-20">
-                              <div class="whats-right-cap">
-                                <h4>No more post</h4>
-                              </div>
-                            </div>
-                          </div>
-                        <?php endif ?>
                       </div>
                     </div>
+
                   </div>
-
-                </div>
-
-                <!-- Gaya Hidup Tab -->
-                <div class="tab-pane fade" id="nav-gaya-hidup" role="tabpanel" aria-labelledby="nav-gaya-hidup-tab">
-                  <div class="row">
-                    <!-- Left Details Caption -->
-                    <div class="col-xl-6 col-lg-12">
-                      <?php if ($gaya_hidup) : ?>
-                        <?php foreach (array_slice($gaya_hidup, 0, 1) as $news) : ?>
-                          <div class="whats-news-single mb-40 mb-40">
-                            <div class="whates-img">
-                              <img src="<?= base_url(); ?>/blog/img/gallery/whats_news_details1.png" alt="">
-                            </div>
-                            <div class="whates-caption">
-                              <h4><a href="<?= site_url('detail/' . $news->slug); ?>"><?= $news->title; ?></a></h4>
-                              <span>by <?= $news->name; ?> - <?= date('d M Y', strtotime($news->published_at)); ?></span>
-                              <p><?= $news->excerpt; ?>...</p>
-                            </div>
-                          </div>
-                        <?php endforeach ?>
-                      <?php else : ?>
-                        <div class="whats-news-single mb-40 mb-40">
-                          <div class="whates-caption">
-                            <h4>No post yet</h4>
-                          </div>
-                        </div>
-                      <?php endif ?>
-                    </div>
-                    <!-- Right single caption -->
-                    <div class="col-xl-6 col-lg-12">
-                      <div class="row">
-                        <!-- single -->
-                        <?php if (count($gaya_hidup) > 1) : ?>
-                          <?php foreach (array_slice($gaya_hidup, 1, 4) as $news) : ?>
-                            <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
-                              <div class="whats-right-single mb-20">
-                                <div class="whats-right-img">
-                                  <img src="<?= base_url(); ?>/blog/img/gallery/whats_right_img1.png" alt="">
-                                </div>
-                                <div class="whats-right-cap">
-                                  <span class="<?= color(); ?>"><?= $news->category; ?></span>
-                                  <h4><a href="<?= site_url('detail/' . $news->slug); ?>"><?= $news->title; ?></a></h4>
-                                  <p><?= date('d M Y', strtotime($news->published_at)); ?></p>
-                                </div>
-                              </div>
-                            </div>
-                          <?php endforeach ?>
-                        <?php else : ?>
-                          <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
-                            <div class="whats-right-single mb-20">
-                              <div class="whats-right-cap">
-                                <h4>No more post</h4>
-                              </div>
-                            </div>
-                          </div>
-                        <?php endif ?>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-
-                <!-- Bisnis Tab -->
-                <div class="tab-pane fade" id="nav-bisnis" role="tabpanel" aria-labelledby="nav-bisnis-tab">
-                  <div class="row">
-                    <!-- Left Details Caption -->
-                    <div class="col-xl-6 col-lg-12">
-                      <?php if ($bisnis) : ?>
-                        <?php foreach (array_slice($bisnis, 0, 1) as $news) : ?>
-                          <div class="whats-news-single mb-40 mb-40">
-                            <div class="whates-img">
-                              <img src="<?= base_url(); ?>/blog/img/gallery/whats_news_details1.png" alt="">
-                            </div>
-                            <div class="whates-caption">
-                              <h4><a href="<?= site_url('detail/' . $news->slug); ?>"><?= $news->title; ?></a></h4>
-                              <span>by <?= $news->name; ?> - <?= date('d M Y', strtotime($news->published_at)); ?></span>
-                              <p><?= $news->excerpt; ?>...</p>
-                            </div>
-                          </div>
-                        <?php endforeach ?>
-                      <?php else : ?>
-                        <div class="whats-news-single mb-40 mb-40">
-                          <div class="whates-caption">
-                            <h4>No post yet</h4>
-                          </div>
-                        </div>
-                      <?php endif ?>
-                    </div>
-                    <!-- Right single caption -->
-                    <div class="col-xl-6 col-lg-12">
-                      <div class="row">
-                        <!-- single -->
-                        <?php if (count($bisnis) > 1) : ?>
-                          <?php foreach (array_slice($bisnis, 1, 4) as $news) : ?>
-                            <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
-                              <div class="whats-right-single mb-20">
-                                <div class="whats-right-img">
-                                  <img src="<?= base_url(); ?>/blog/img/gallery/whats_right_img1.png" alt="">
-                                </div>
-                                <div class="whats-right-cap">
-                                  <span class="<?= color(); ?>"><?= $news->category; ?></span>
-                                  <h4><a href="<?= site_url('detail/' . $news->slug); ?>"><?= $news->title; ?></a></h4>
-                                  <p><?= date('d M Y', strtotime($news->published_at)); ?></p>
-                                </div>
-                              </div>
-                            </div>
-                          <?php endforeach ?>
-                        <?php else : ?>
-                          <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
-                            <div class="whats-right-single mb-20">
-                              <div class="whats-right-cap">
-                                <h4>No more post</h4>
-                              </div>
-                            </div>
-                          </div>
-                        <?php endif ?>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-
-                <!-- Hiburan Tab -->
-                <div class="tab-pane fade" id="nav-hiburan" role="tabpanel" aria-labelledby="nav-hiburan-tab">
-                  <div class="row">
-                    <!-- Left Details Caption -->
-                    <div class="col-xl-6 col-lg-12">
-                      <?php if ($hiburan) : ?>
-                        <?php foreach (array_slice($hiburan, 0, 1) as $news) : ?>
-                          <div class="whats-news-single mb-40 mb-40">
-                            <div class="whates-img">
-                              <img src="<?= base_url(); ?>/blog/img/gallery/whats_news_details1.png" alt="">
-                            </div>
-                            <div class="whates-caption">
-                              <h4><a href="<?= site_url('detail/' . $news->slug); ?>"><?= $news->title; ?></a></h4>
-                              <span>by <?= $news->name; ?> - <?= date('d M Y', strtotime($news->published_at)); ?></span>
-                              <p><?= $news->excerpt; ?>...</p>
-                            </div>
-                          </div>
-                        <?php endforeach ?>
-                      <?php else : ?>
-                        <div class="whats-news-single mb-40 mb-40">
-                          <div class="whates-caption">
-                            <h4>No post yet</h4>
-                          </div>
-                        </div>
-                      <?php endif ?>
-                    </div>
-                    <!-- Right single caption -->
-                    <div class="col-xl-6 col-lg-12">
-                      <div class="row">
-                        <!-- single -->
-                        <?php if (count($hiburan) > 1) : ?>
-                          <?php foreach (array_slice($hiburan, 1, 4) as $news) : ?>
-                            <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
-                              <div class="whats-right-single mb-20">
-                                <div class="whats-right-img">
-                                  <img src="<?= base_url(); ?>/blog/img/gallery/whats_right_img1.png" alt="">
-                                </div>
-                                <div class="whats-right-cap">
-                                  <span class="<?= color(); ?>"><?= $news->category; ?></span>
-                                  <h4><a href="<?= site_url('detail/' . $news->slug); ?>"><?= $news->title; ?></a></h4>
-                                  <p><?= date('d M Y', strtotime($news->published_at)); ?></p>
-                                </div>
-                              </div>
-                            </div>
-                          <?php endforeach ?>
-                        <?php else : ?>
-                          <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
-                            <div class="whats-right-single mb-20">
-                              <div class="whats-right-cap">
-                                <h4>No more post</h4>
-                              </div>
-                            </div>
-                          </div>
-                        <?php endif ?>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-
-                <!-- Olahraga Tab -->
-                <div class="tab-pane fade" id="nav-olahraga" role="tabpanel" aria-labelledby="nav-olahraga-tab">
-                  <div class="row">
-                    <!-- Left Details Caption -->
-                    <div class="col-xl-6 col-lg-12">
-                      <?php if ($olahraga) : ?>
-                        <?php foreach (array_slice($olahraga, 0, 1) as $news) : ?>
-                          <div class="whats-news-single mb-40 mb-40">
-                            <div class="whates-img">
-                              <img src="<?= base_url(); ?>/blog/img/gallery/whats_news_details1.png" alt="">
-                            </div>
-                            <div class="whates-caption">
-                              <h4><a href="<?= site_url('detail/' . $news->slug); ?>"><?= $news->title; ?></a></h4>
-                              <span>by <?= $news->name; ?> - <?= date('d M Y', strtotime($news->published_at)); ?></span>
-                              <p><?= $news->excerpt; ?>...</p>
-                            </div>
-                          </div>
-                        <?php endforeach ?>
-                      <?php else : ?>
-                        <div class="whats-news-single mb-40 mb-40">
-                          <div class="whates-caption">
-                            <h4>No post yet</h4>
-                          </div>
-                        </div>
-                      <?php endif ?>
-                    </div>
-                    <!-- Right single caption -->
-                    <div class="col-xl-6 col-lg-12">
-                      <div class="row">
-                        <!-- single -->
-                        <?php if (count($olahraga) > 1) : ?>
-                          <?php foreach (array_slice($olahraga, 1, 4) as $news) : ?>
-                            <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
-                              <div class="whats-right-single mb-20">
-                                <div class="whats-right-img">
-                                  <img src="<?= base_url(); ?>/blog/img/gallery/whats_right_img1.png" alt="">
-                                </div>
-                                <div class="whats-right-cap">
-                                  <span class="<?= color(); ?>"><?= $news->category; ?></span>
-                                  <h4><a href="<?= site_url('detail/' . $news->slug); ?>"><?= $news->title; ?></a></h4>
-                                  <p><?= date('d M Y', strtotime($news->published_at)); ?></p>
-                                </div>
-                              </div>
-                            </div>
-                          <?php endforeach ?>
-                        <?php else : ?>
-                          <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
-                            <div class="whats-right-single mb-20">
-                              <div class="whats-right-cap">
-                                <h4>No more post</h4>
-                              </div>
-                            </div>
-                          </div>
-                        <?php endif ?>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
+                <?php endforeach ?>
                 <!-- End Nav Card -->
               </div>
             </div>

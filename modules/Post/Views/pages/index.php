@@ -1,14 +1,14 @@
-<?= $this->extend('\Modules\Post\Views\layouts\main') ?>
+<?= $this->extend('\Modules\Post\Views\main') ?>
 
 <?= $this->section('content') ?>
 
 <main>
   <!-- Trending in the Week Area Start -->
-  <?= $this->include('\Modules\Post\Views\partials\trending'); ?>
+  <!-- <?//= $this->include('\Modules\Post\Views\partials\trending'); ?> -->
   <!-- Trending Area End -->
 
   <!-- Whats New Start -->
-  <!-- <?//= $this->include('\Modules\Post\Views\partials\new');  ?> -->
+  <?= $this->include('\Modules\Post\Views\partials\new2');  ?>
   <!-- Whats New End -->
 
   <!--   Weekly2-News start -->

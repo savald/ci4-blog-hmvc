@@ -21,16 +21,15 @@ class Post extends BaseController
     $data = [
       'title'       => 'Homepage',
       'categories'  => $this->categoriesModel->getCategories(),
-      'newest'      => $this->postModel->getNewest(),
-      'fashion'     => $this->postModel->getByCategory('Fashion'),
-      'teknologi'   => $this->postModel->getByCategory('Teknologi'),
-      'kesehatan'   => $this->postModel->getByCategory('Kesehatan'),
-      'gaya_hidup'  => $this->postModel->getByCategory('Gaya Hidup'),
-      'bisnis'      => $this->postModel->getByCategory('Bisnis'),
-      'hiburan'     => $this->postModel->getByCategory('Hiburan'),
-      'olahraga'    => $this->postModel->getByCategory('Olahraga'),
+      'newest'      => $this->postModel->getPostNewest(),
+      'fashion'     => $this->postModel->getPostByCategory('Fashion'),
+      'teknologi'   => $this->postModel->getPostByCategory('Teknologi'),
+      'kesehatan'   => $this->postModel->getPostByCategory('Kesehatan'),
+      'gaya_hidup'  => $this->postModel->getPostByCategory('Gaya Hidup'),
+      'bisnis'      => $this->postModel->getPostByCategory('Bisnis'),
+      'hiburan'     => $this->postModel->getPostByCategory('Hiburan'),
+      'olahraga'    => $this->postModel->getPostByCategory('Olahraga'),
     ];
-
 
     foreach ($data['newest'] as $post) {
       switch ($post->category) {
@@ -63,30 +62,27 @@ class Post extends BaseController
       $post->post_image = "https://source.unsplash.com/random/800x800/?$category";
     }
 
-    return view('Post\Views\index', $data);
+    return view('Post\Views\pages\index', $data);
   }
 
   public function detail($slug)
   {
     $data = [
       'title' => 'Details',
-      'post'  => $this->postModel->getDetail($slug),
+      'post'  => $this->postModel->getPostDetail($slug),
     ];
-    // dd($data['post']);
 
-    return view('Post\Views\blog-details', $data);
+    return view('Post\Views\pages\blog-details', $data);
   }
 
   public function about()
   {
-    $faker = \Faker\Factory::create('id_ID');
-    // d(date_format($faker->dateTimeThisYear(), "Y-m-d H:i:s"));
 
     $data = [
       'title' => 'About'
     ];
 
-    return view('\Modules\Post\Views\about', $data);
+    return view('\Modules\Post\Views\pages\about', $data);
   }
 
   public function category()
@@ -95,7 +91,7 @@ class Post extends BaseController
       'title' => 'Categories'
     ];
 
-    return view('\Modules\Post\Views\categories', $data);
+    return view('\Modules\Post\Views\pages\categories', $data);
   }
 
   public function latest()
@@ -104,7 +100,7 @@ class Post extends BaseController
       'title' => 'Latest'
     ];
 
-    return view('\Modules\Post\Views\latest', $data);
+    return view('\Modules\Post\Views\pages\latest', $data);
   }
 
   public function contact()
@@ -113,6 +109,6 @@ class Post extends BaseController
       'title' => 'Contact'
     ];
 
-    return view('\Modules\Post\Views\contact', $data);
+    return view('\Modules\Post\Views\pages\contact', $data);
   }
 }
