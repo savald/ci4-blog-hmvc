@@ -1,0 +1,32 @@
+ERROR - 2022-06-04 03:00:39 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2022-06-04 03:00:39 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+#0 D:\laragon\www\ci4-blog-post\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 D:\laragon\www\ci4-blog-post\system\Database\BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 D:\laragon\www\ci4-blog-post\system\Model.php(723): CodeIgniter\Database\BaseBuilder->get()
+#3 D:\laragon\www\ci4-blog-post\modules\Post\Models\CategoriesModel.php(21): CodeIgniter\Model->__call('get', Array)
+#4 D:\laragon\www\ci4-blog-post\modules\Post\Controllers\Post.php(23): Modules\Post\Models\CategoriesModel->getCategories()
+#5 D:\laragon\www\ci4-blog-post\system\CodeIgniter.php(824): Modules\Post\Controllers\Post->index()
+#6 D:\laragon\www\ci4-blog-post\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(Modules\Post\Controllers\Post))
+#7 D:\laragon\www\ci4-blog-post\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\ci4-blog-post\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\ci4-blog-post\system\Commands\Server\rewrite.php(43): require_once('D:\\laragon\\www\\...')
+#10 {main}
+ERROR - 2022-06-04 03:00:54 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2022-06-04 03:00:54 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+#0 D:\laragon\www\ci4-blog-post\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 D:\laragon\www\ci4-blog-post\system\Database\BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 D:\laragon\www\ci4-blog-post\system\Model.php(723): CodeIgniter\Database\BaseBuilder->get()
+#3 D:\laragon\www\ci4-blog-post\modules\Post\Models\CategoriesModel.php(21): CodeIgniter\Model->__call('get', Array)
+#4 D:\laragon\www\ci4-blog-post\modules\Post\Controllers\Post.php(23): Modules\Post\Models\CategoriesModel->getCategories()
+#5 D:\laragon\www\ci4-blog-post\system\CodeIgniter.php(824): Modules\Post\Controllers\Post->index()
+#6 D:\laragon\www\ci4-blog-post\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(Modules\Post\Controllers\Post))
+#7 D:\laragon\www\ci4-blog-post\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\ci4-blog-post\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\ci4-blog-post\system\Commands\Server\rewrite.php(43): require_once('D:\\laragon\\www\\...')
+#10 {main}

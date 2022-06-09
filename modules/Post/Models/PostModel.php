@@ -60,12 +60,23 @@ class PostModel extends Model
       ->getRow();
   }
 
-  public function getPostByCategory($category = null)
+  public function getPostByCategory($category)
   {
     return $this
       ->join('categories c', 'c.id=posts.category_id', 'left')
       ->join('authors au', 'au.id=posts.author_id', 'left')
       ->where('c.category', $category)
+      ->select('title, body, excerpt, c.category, au.name, slug, published_at, post_image')
+      ->orderBy('published_at', 'DESC')
+      ->get(4)
+      ->getResult();
+  }
+
+  public function getPostsByPopularWeek()
+  {
+    return $this
+      ->join('visitors v', 'v.id=posts.category_id', 'left')
+      ->join('authors au', 'au.id=posts.author_id', 'left')
       ->select('title, body, excerpt, c.category, au.name, slug, published_at, post_image')
       ->orderBy('published_at', 'DESC')
       ->get(4)

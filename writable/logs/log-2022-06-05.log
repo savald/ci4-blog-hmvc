@@ -1,0 +1,113 @@
+CRITICAL - 2022-06-05 01:57:18 --> Undefined property: Modules\Post\Controllers\Post::$categoriesMo
+#0 D:\laragon\www\ci4-blog-post\modules\Post\Controllers\Post.php(25): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\laragon\\www\\...', 25, Array)
+#1 D:\laragon\www\ci4-blog-post\system\CodeIgniter.php(824): Modules\Post\Controllers\Post->index()
+#2 D:\laragon\www\ci4-blog-post\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(Modules\Post\Controllers\Post))
+#3 D:\laragon\www\ci4-blog-post\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\laragon\www\ci4-blog-post\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\laragon\www\ci4-blog-post\system\Commands\Server\rewrite.php(43): require_once('D:\\laragon\\www\\...')
+#6 {main}
+ERROR - 2022-06-05 02:57:28 --> Unknown column 'post_id' in 'having clause'
+CRITICAL - 2022-06-05 02:57:28 --> Unknown column 'post_id' in 'having clause'
+#0 D:\laragon\www\ci4-blog-post\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `visitor...', 0)
+#1 D:\laragon\www\ci4-blog-post\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `visitor...')
+#2 D:\laragon\www\ci4-blog-post\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `visitor...')
+#3 D:\laragon\www\ci4-blog-post\system\Database\BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT `visitor...', Array, false)
+#4 D:\laragon\www\ci4-blog-post\system\Model.php(723): CodeIgniter\Database\BaseBuilder->get(4)
+#5 D:\laragon\www\ci4-blog-post\modules\Post\Models\VisitorsModel.php(27): CodeIgniter\Model->__call('get', Array)
+#6 D:\laragon\www\ci4-blog-post\modules\Post\Controllers\Post.php(27): Post\Models\VisitorsModel->getPostsByPopularWeek()
+#7 D:\laragon\www\ci4-blog-post\system\CodeIgniter.php(824): Modules\Post\Controllers\Post->index()
+#8 D:\laragon\www\ci4-blog-post\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(Modules\Post\Controllers\Post))
+#9 D:\laragon\www\ci4-blog-post\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\laragon\www\ci4-blog-post\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 D:\laragon\www\ci4-blog-post\system\Commands\Server\rewrite.php(43): require_once('D:\\laragon\\www\\...')
+#12 {main}
+ERROR - 2022-06-05 02:57:38 --> Unknown column 'post_id' in 'having clause'
+CRITICAL - 2022-06-05 02:57:38 --> Unknown column 'post_id' in 'having clause'
+#0 D:\laragon\www\ci4-blog-post\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `visitor...', 0)
+#1 D:\laragon\www\ci4-blog-post\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `visitor...')
+#2 D:\laragon\www\ci4-blog-post\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `visitor...')
+#3 D:\laragon\www\ci4-blog-post\system\Database\BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT `visitor...', Array, false)
+#4 D:\laragon\www\ci4-blog-post\system\Model.php(723): CodeIgniter\Database\BaseBuilder->get(4)
+#5 D:\laragon\www\ci4-blog-post\modules\Post\Models\VisitorsModel.php(27): CodeIgniter\Model->__call('get', Array)
+#6 D:\laragon\www\ci4-blog-post\modules\Post\Controllers\Post.php(27): Post\Models\VisitorsModel->getPostsByPopularWeek()
+#7 D:\laragon\www\ci4-blog-post\system\CodeIgniter.php(824): Modules\Post\Controllers\Post->index()
+#8 D:\laragon\www\ci4-blog-post\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(Modules\Post\Controllers\Post))
+#9 D:\laragon\www\ci4-blog-post\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\laragon\www\ci4-blog-post\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 D:\laragon\www\ci4-blog-post\system\Commands\Server\rewrite.php(43): require_once('D:\\laragon\\www\\...')
+#12 {main}
+ERROR - 2022-06-05 02:58:08 --> Unknown column 'post_id' in 'having clause'
+CRITICAL - 2022-06-05 02:58:08 --> Unknown column 'post_id' in 'having clause'
+#0 D:\laragon\www\ci4-blog-post\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `visitor...', 0)
+#1 D:\laragon\www\ci4-blog-post\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `visitor...')
+#2 D:\laragon\www\ci4-blog-post\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `visitor...')
+#3 D:\laragon\www\ci4-blog-post\system\Database\BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT `visitor...', Array, false)
+#4 D:\laragon\www\ci4-blog-post\system\Model.php(723): CodeIgniter\Database\BaseBuilder->get(4)
+#5 D:\laragon\www\ci4-blog-post\modules\Post\Models\VisitorsModel.php(27): CodeIgniter\Model->__call('get', Array)
+#6 D:\laragon\www\ci4-blog-post\modules\Post\Controllers\Post.php(27): Post\Models\VisitorsModel->getPostsByPopularWeek()
+#7 D:\laragon\www\ci4-blog-post\system\CodeIgniter.php(824): Modules\Post\Controllers\Post->index()
+#8 D:\laragon\www\ci4-blog-post\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(Modules\Post\Controllers\Post))
+#9 D:\laragon\www\ci4-blog-post\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\laragon\www\ci4-blog-post\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 D:\laragon\www\ci4-blog-post\system\Commands\Server\rewrite.php(43): require_once('D:\\laragon\\www\\...')
+#12 {main}
+ERROR - 2022-06-05 02:58:11 --> Unknown column 'post_id' in 'having clause'
+CRITICAL - 2022-06-05 02:58:11 --> Unknown column 'post_id' in 'having clause'
+#0 D:\laragon\www\ci4-blog-post\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `visitor...', 0)
+#1 D:\laragon\www\ci4-blog-post\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `visitor...')
+#2 D:\laragon\www\ci4-blog-post\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `visitor...')
+#3 D:\laragon\www\ci4-blog-post\system\Database\BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT `visitor...', Array, false)
+#4 D:\laragon\www\ci4-blog-post\system\Model.php(723): CodeIgniter\Database\BaseBuilder->get(4)
+#5 D:\laragon\www\ci4-blog-post\modules\Post\Models\VisitorsModel.php(27): CodeIgniter\Model->__call('get', Array)
+#6 D:\laragon\www\ci4-blog-post\modules\Post\Controllers\Post.php(27): Post\Models\VisitorsModel->getPostsByPopularWeek()
+#7 D:\laragon\www\ci4-blog-post\system\CodeIgniter.php(824): Modules\Post\Controllers\Post->index()
+#8 D:\laragon\www\ci4-blog-post\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(Modules\Post\Controllers\Post))
+#9 D:\laragon\www\ci4-blog-post\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\laragon\www\ci4-blog-post\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 D:\laragon\www\ci4-blog-post\system\Commands\Server\rewrite.php(43): require_once('D:\\laragon\\www\\...')
+#12 {main}
+ERROR - 2022-06-05 02:58:13 --> Unknown column 'post_id' in 'having clause'
+CRITICAL - 2022-06-05 02:58:13 --> Unknown column 'post_id' in 'having clause'
+#0 D:\laragon\www\ci4-blog-post\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `visitor...', 0)
+#1 D:\laragon\www\ci4-blog-post\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `visitor...')
+#2 D:\laragon\www\ci4-blog-post\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `visitor...')
+#3 D:\laragon\www\ci4-blog-post\system\Database\BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT `visitor...', Array, false)
+#4 D:\laragon\www\ci4-blog-post\system\Model.php(723): CodeIgniter\Database\BaseBuilder->get(4)
+#5 D:\laragon\www\ci4-blog-post\modules\Post\Models\VisitorsModel.php(27): CodeIgniter\Model->__call('get', Array)
+#6 D:\laragon\www\ci4-blog-post\modules\Post\Controllers\Post.php(27): Post\Models\VisitorsModel->getPostsByPopularWeek()
+#7 D:\laragon\www\ci4-blog-post\system\CodeIgniter.php(824): Modules\Post\Controllers\Post->index()
+#8 D:\laragon\www\ci4-blog-post\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(Modules\Post\Controllers\Post))
+#9 D:\laragon\www\ci4-blog-post\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\laragon\www\ci4-blog-post\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 D:\laragon\www\ci4-blog-post\system\Commands\Server\rewrite.php(43): require_once('D:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2022-06-05 02:59:37 --> Call to a member function get() on int
+#0 D:\laragon\www\ci4-blog-post\modules\Post\Controllers\Post.php(27): Post\Models\VisitorsModel->getPostsByPopularWeek()
+#1 D:\laragon\www\ci4-blog-post\system\CodeIgniter.php(824): Modules\Post\Controllers\Post->index()
+#2 D:\laragon\www\ci4-blog-post\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(Modules\Post\Controllers\Post))
+#3 D:\laragon\www\ci4-blog-post\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\laragon\www\ci4-blog-post\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\laragon\www\ci4-blog-post\system\Commands\Server\rewrite.php(43): require_once('D:\\laragon\\www\\...')
+#6 {main}
+CRITICAL - 2022-06-05 02:59:42 --> syntax error, unexpected '}', expecting ';'
+#0 D:\laragon\www\ci4-blog-post\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\laragon\\www\\...')
+#1 D:\laragon\www\ci4-blog-post\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Post\\Models\\Vis...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('Post\\Models\\Vis...')
+#3 D:\laragon\www\ci4-blog-post\modules\Post\Controllers\Post.php(18): spl_autoload_call('Post\\Models\\Vis...')
+#4 D:\laragon\www\ci4-blog-post\system\CodeIgniter.php(801): Modules\Post\Controllers\Post->__construct()
+#5 D:\laragon\www\ci4-blog-post\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#6 D:\laragon\www\ci4-blog-post\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\laragon\www\ci4-blog-post\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\laragon\www\ci4-blog-post\system\Commands\Server\rewrite.php(43): require_once('D:\\laragon\\www\\...')
+#9 {main}
+CRITICAL - 2022-06-05 02:59:44 --> syntax error, unexpected '}', expecting ';'
+#0 D:\laragon\www\ci4-blog-post\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\laragon\\www\\...')
+#1 D:\laragon\www\ci4-blog-post\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Post\\Models\\Vis...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('Post\\Models\\Vis...')
+#3 D:\laragon\www\ci4-blog-post\modules\Post\Controllers\Post.php(18): spl_autoload_call('Post\\Models\\Vis...')
+#4 D:\laragon\www\ci4-blog-post\system\CodeIgniter.php(801): Modules\Post\Controllers\Post->__construct()
+#5 D:\laragon\www\ci4-blog-post\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#6 D:\laragon\www\ci4-blog-post\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\laragon\www\ci4-blog-post\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\laragon\www\ci4-blog-post\system\Commands\Server\rewrite.php(43): require_once('D:\\laragon\\www\\...')
+#9 {main}

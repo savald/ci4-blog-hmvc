@@ -14,7 +14,7 @@
             <div class="row">
               <div class="col-lg-12">
                 <div class="small-tittle mb-30">
-                  <h4>Most Popular</h4>
+                  <h4>Most Popular This Week</h4>
                 </div>
               </div>
             </div>

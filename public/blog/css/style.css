@@ -4481,6 +4481,17 @@ hr {
 .blog-pagination .page-item:last-child .page-link {
   margin-right: 0;
 }
+.single-post-area .single-post .feature-img {
+overflow: hidden;
+width: 750px;
+height: 375px;
+}
+.single-post-area .single-post .feature-img img {
+width: inherit;
+height: inherit;
+object-fit: cover;
+object-position: center;
+}
 .single-post-area .blog_details {
   box-shadow: none;
   padding: 0;

@@ -5,6 +5,7 @@ namespace Modules\Post\Controllers;
 use App\Controllers\BaseController;
 use Modules\Post\Models\CategoriesModel;
 use Modules\Post\Models\PostModel;
+use Post\Models\VisitorsModel;
 
 class Post extends BaseController
 {
@@ -14,44 +15,53 @@ class Post extends BaseController
   {
     $this->postModel = new PostModel();
     $this->categoriesModel = new CategoriesModel();
+    $this->visitorsModel = new VisitorsModel();
   }
 
   public function index()
   {
+    //  get ipAddress
+    // $ipAddress = $this->request->getIPAddress();
+
+    // dd($ipAddress);
+    // $popular = $this->visitorsModel->getPostsByPopularWeek();
+    // dd($popular);
+
     $data = [
       'title'       => 'Homepage',
       'categories'  => $this->categoriesModel->getCategories(),
       'newest'      => $this->postModel->getPostNewest(),
       'fashion'     => $this->postModel->getPostByCategory('Fashion'),
-      'teknologi'   => $this->postModel->getPostByCategory('Teknologi'),
-      'kesehatan'   => $this->postModel->getPostByCategory('Kesehatan'),
-      'gaya_hidup'  => $this->postModel->getPostByCategory('Gaya Hidup'),
-      'bisnis'      => $this->postModel->getPostByCategory('Bisnis'),
-      'hiburan'     => $this->postModel->getPostByCategory('Hiburan'),
-      'olahraga'    => $this->postModel->getPostByCategory('Olahraga'),
+      'technology'   => $this->postModel->getPostByCategory('Teknologi'),
+      'health'   => $this->postModel->getPostByCategory('Kesehatan'),
+      'lifestyle'  => $this->postModel->getPostByCategory('Gaya Hidup'),
+      'business'      => $this->postModel->getPostByCategory('Bisnis'),
+      'entertainment'     => $this->postModel->getPostByCategory('Hiburan'),
+      'sport'    => $this->postModel->getPostByCategory('Olahraga'),
     ];
+
 
     foreach ($data['newest'] as $post) {
       switch ($post->category) {
         case 'Fashion':
           $category = 'fashion';
           break;
-        case 'Teknologi':
+        case 'Technology':
           $category = 'technology';
           break;
-        case 'Kesehatan':
+        case 'Health':
           $category = 'health';
           break;
-        case 'Gaya Hidup':
+        case 'Lifestyle':
           $category = 'lifestyle';
           break;
-        case 'Bisnis':
+        case 'Business':
           $category = 'business';
           break;
-        case 'Hiburan':
+        case 'Entertainment':
           $category = 'entertainment';
           break;
-        case 'Olahraga':
+        case 'Sport':
           $category = 'sport';
           break;
 
@@ -67,9 +77,12 @@ class Post extends BaseController
 
   public function detail($slug)
   {
+    $post =  $this->postModel->getPostDetail($slug);
+    $post->post_image = $post->post_image === null ? "https://source.unsplash.com/random/800x800/?$post->category" : $post->post_image;
+
     $data = [
-      'title' => 'Details',
-      'post'  => $this->postModel->getPostDetail($slug),
+      'title' => $post->title,
+      'post'  => $post,
     ];
 
     return view('Post\Views\pages\blog-details', $data);

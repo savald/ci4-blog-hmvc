@@ -91,13 +91,13 @@
 
                 </div>
 
-                <!-- Teknologi Tab -->
-                <div class="tab-pane fade" id="nav-teknologi" role="tabpanel" aria-labelledby="nav-teknologi-tab">
+                <!-- Technology Tab -->
+                <div class="tab-pane fade" id="nav-technology" role="tabpanel" aria-labelledby="nav-technology-tab">
                   <div class="row">
                     <!-- Left Details Caption -->
                     <div class="col-xl-6 col-lg-12">
-                      <?php if ($teknologi) : ?>
-                        <?php foreach (array_slice($teknologi, 0, 1) as $news) : ?>
+                      <?php if ($technology) : ?>
+                        <?php foreach (array_slice($technology, 0, 1) as $news) : ?>
                           <div class="whats-news-single mb-40 mb-40">
                             <div class="whates-img">
                               <img src="<?= $news->post_image == null ? 'https://source.unsplash.com/random/800x800/?technology' : $news->post_image; ?>" alt="">
@@ -122,8 +122,8 @@
                     <div class="col-xl-6 col-lg-12">
                       <div class="row">
                         <!-- single -->
-                        <?php if (count($teknologi) > 1) : ?>
-                          <?php foreach (array_slice($teknologi, 1, 4) as $news) : ?>
+                        <?php if (count($technology) > 1) : ?>
+                          <?php foreach (array_slice($technology, 1, 4) as $news) : ?>
                             <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                               <div class="whats-right-single mb-20">
                                 <div class="whats-right-img">
@@ -152,13 +152,13 @@
 
                 </div>
 
-                <!-- Kesehatan Tab -->
-                <div class="tab-pane fade" id="nav-kesehatan" role="tabpanel" aria-labelledby="nav-kesehatan-tab">
+                <!-- Health Tab -->
+                <div class="tab-pane fade" id="nav-health" role="tabpanel" aria-labelledby="nav-health-tab">
                   <div class="row">
                     <!-- Left Details Caption -->
                     <div class="col-xl-6 col-lg-12">
-                      <?php if ($kesehatan) : ?>
-                        <?php foreach (array_slice($kesehatan, 0, 1) as $news) : ?>
+                      <?php if ($health) : ?>
+                        <?php foreach (array_slice($health, 0, 1) as $news) : ?>
                           <div class="whats-news-single mb-40 mb-40">
                             <div class="whates-img">
                               <img src="<?= $news->post_image == null ? 'https://source.unsplash.com/random/800x800/?health' : $news->post_image; ?>" alt="">
@@ -182,8 +182,8 @@
                     <div class="col-xl-6 col-lg-12">
                       <div class="row">
                         <!-- single -->
-                        <?php if (count($kesehatan) > 1) : ?>
-                          <?php foreach (array_slice($kesehatan, 1, 4) as $news) : ?>
+                        <?php if (count($health) > 1) : ?>
+                          <?php foreach (array_slice($health, 1, 4) as $news) : ?>
                             <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                               <div class="whats-right-single mb-20">
                                 <div class="whats-right-img">
@@ -212,13 +212,13 @@
 
                 </div>
 
-                <!-- Gaya Hidup Tab -->
-                <div class="tab-pane fade" id="nav-gaya-hidup" role="tabpanel" aria-labelledby="nav-gaya-hidup-tab">
+                <!-- Lifestyle Tab -->
+                <div class="tab-pane fade" id="nav-lifestyle" role="tabpanel" aria-labelledby="nav-lifestyle-tab">
                   <div class="row">
                     <!-- Left Details Caption -->
                     <div class="col-xl-6 col-lg-12">
-                      <?php if ($gaya_hidup) : ?>
-                        <?php foreach (array_slice($gaya_hidup, 0, 1) as $news) : ?>
+                      <?php if ($lifestyle) : ?>
+                        <?php foreach (array_slice($lifestyle, 0, 1) as $news) : ?>
                           <div class="whats-news-single mb-40 mb-40">
                             <div class="whates-img">
                               <img src="<?= $news->post_image == null ? 'https://source.unsplash.com/random/800x800/?lifestyle' : $news->post_image; ?>" alt="">
@@ -242,8 +242,8 @@
                     <div class="col-xl-6 col-lg-12">
                       <div class="row">
                         <!-- single -->
-                        <?php if (count($gaya_hidup) > 1) : ?>
-                          <?php foreach (array_slice($gaya_hidup, 1, 4) as $news) : ?>
+                        <?php if (count($lifestyle) > 1) : ?>
+                          <?php foreach (array_slice($lifestyle, 1, 4) as $news) : ?>
                             <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                               <div class="whats-right-single mb-20">
                                 <div class="whats-right-img">
@@ -272,13 +272,13 @@
 
                 </div>
 
-                <!-- Bisnis Tab -->
-                <div class="tab-pane fade" id="nav-bisnis" role="tabpanel" aria-labelledby="nav-bisnis-tab">
+                <!-- Business Tab -->
+                <div class="tab-pane fade" id="nav-business" role="tabpanel" aria-labelledby="nav-business-tab">
                   <div class="row">
                     <!-- Left Details Caption -->
                     <div class="col-xl-6 col-lg-12">
-                      <?php if ($bisnis) : ?>
-                        <?php foreach (array_slice($bisnis, 0, 1) as $news) : ?>
+                      <?php if ($business) : ?>
+                        <?php foreach (array_slice($business, 0, 1) as $news) : ?>
                           <div class="whats-news-single mb-40 mb-40">
                             <div class="whates-img">
                               <img src="<?= $news->post_image == null ? 'https://source.unsplash.com/random/800x800/?business' : $news->post_image; ?>" alt="">
@@ -302,8 +302,8 @@
                     <div class="col-xl-6 col-lg-12">
                       <div class="row">
                         <!-- single -->
-                        <?php if (count($bisnis) > 1) : ?>
-                          <?php foreach (array_slice($bisnis, 1, 4) as $news) : ?>
+                        <?php if (count($business) > 1) : ?>
+                          <?php foreach (array_slice($business, 1, 4) as $news) : ?>
                             <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                               <div class="whats-right-single mb-20">
                                 <div class="whats-right-img">
@@ -332,13 +332,13 @@
 
                 </div>
 
-                <!-- Hiburan Tab -->
-                <div class="tab-pane fade" id="nav-hiburan" role="tabpanel" aria-labelledby="nav-hiburan-tab">
+                <!-- Entertainment Tab -->
+                <div class="tab-pane fade" id="nav-entertainment" role="tabpanel" aria-labelledby="nav-entertainment-tab">
                   <div class="row">
                     <!-- Left Details Caption -->
                     <div class="col-xl-6 col-lg-12">
-                      <?php if ($hiburan) : ?>
-                        <?php foreach (array_slice($hiburan, 0, 1) as $news) : ?>
+                      <?php if ($entertainment) : ?>
+                        <?php foreach (array_slice($entertainment, 0, 1) as $news) : ?>
                           <div class="whats-news-single mb-40 mb-40">
                             <div class="whates-img">
                               <img src="<?= $news->post_image == null ? 'https://source.unsplash.com/random/800x800/?entertainment' : $news->post_image; ?>" alt="">
@@ -362,8 +362,8 @@
                     <div class="col-xl-6 col-lg-12">
                       <div class="row">
                         <!-- single -->
-                        <?php if (count($hiburan) > 1) : ?>
-                          <?php foreach (array_slice($hiburan, 1, 4) as $news) : ?>
+                        <?php if (count($entertainment) > 1) : ?>
+                          <?php foreach (array_slice($entertainment, 1, 4) as $news) : ?>
                             <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                               <div class="whats-right-single mb-20">
                                 <div class="whats-right-img">
@@ -392,13 +392,13 @@
 
                 </div>
 
-                <!-- Olahraga Tab -->
-                <div class="tab-pane fade" id="nav-olahraga" role="tabpanel" aria-labelledby="nav-olahraga-tab">
+                <!-- Sport Tab -->
+                <div class="tab-pane fade" id="nav-sport" role="tabpanel" aria-labelledby="nav-sport-tab">
                   <div class="row">
                     <!-- Left Details Caption -->
                     <div class="col-xl-6 col-lg-12">
-                      <?php if ($olahraga) : ?>
-                        <?php foreach (array_slice($olahraga, 0, 1) as $news) : ?>
+                      <?php if ($sport) : ?>
+                        <?php foreach (array_slice($sport, 0, 1) as $news) : ?>
                           <div class="whats-news-single mb-40 mb-40">
                             <div class="whates-img">
                               <img src="<?= $news->post_image == null ? 'https://source.unsplash.com/random/800x800/?sport' : $news->post_image; ?>" alt="">
@@ -422,8 +422,8 @@
                     <div class="col-xl-6 col-lg-12">
                       <div class="row">
                         <!-- single -->
-                        <?php if (count($olahraga) > 1) : ?>
-                          <?php foreach (array_slice($olahraga, 1, 4) as $news) : ?>
+                        <?php if (count($sport) > 1) : ?>
+                          <?php foreach (array_slice($sport, 1, 4) as $news) : ?>
                             <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                               <div class="whats-right-single mb-20">
                                 <div class="whats-right-img">

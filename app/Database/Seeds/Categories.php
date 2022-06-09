@@ -10,12 +10,12 @@ class Categories extends Seeder
   {
     $data = [
       ['category' => 'Fashion'],
-      ['category' => 'Teknologi'],
-      ['category' => 'Kesehatan'],
-      ['category' => 'Gaya Hidup'],
-      ['category' => 'Bisnis'],
-      ['category' => 'Hiburan'],
-      ['category' => 'Olahraga'],
+      ['category' => 'Technology'],
+      ['category' => 'Health'],
+      ['category' => 'Lifestyle'],
+      ['category' => 'Business'],
+      ['category' => 'Entertainment'],
+      ['category' => 'Sport'],
     ];
 
     $this->db->table('categories')->insertBatch($data);

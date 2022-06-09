@@ -10,7 +10,7 @@
         <div class="col-lg-8 posts-list">
           <div class="single-post">
             <div class="feature-img">
-              <img class="img-fluid" src="<?= base_url(); ?>/blog/img/blog/single_blog_1.png" alt="">
+              <img class="img-fluid" src="<?= $post->post_image; ?>" alt="">
             </div>
             <div class="blog_details">
               <h2><?= $post->title; ?></h2>
@@ -31,6 +31,7 @@
               </div>
             </div>
           </div>
+
           <div class="navigation-top">
             <div class="d-sm-flex justify-content-between text-center">
               <p class="like-info"><span class="align-middle"><i class="fa fa-heart"></i></span> Lily and 4 people like this</p>
@@ -85,6 +86,7 @@
               </div>
             </div>
           </div>
+
           <div class="blog-author">
             <div class="media align-items-center">
               <img src="<?= base_url(); ?>/blog/img/blog/author.png" alt="">
@@ -96,6 +98,7 @@
               </div>
             </div>
           </div>
+
           <div class="comments-area">
             <h4>05 Comments</h4>
             <div class="comment-list">
@@ -177,6 +180,7 @@
               </div>
             </div>
           </div>
+
           <div class="comment-form">
             <h4>Leave a Reply</h4>
             <form class="form-contact comment_form" action="#" id="commentForm">
@@ -208,6 +212,7 @@
             </form>
           </div>
         </div>
+
         <div class="col-lg-4">
           <div class="blog_right_sidebar">
             <aside class="single_sidebar_widget search_widget">

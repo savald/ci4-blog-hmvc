@@ -11,5 +11,6 @@ class All extends Seeder
     $this->call('Author');
     $this->call('Categories');
     $this->call('Post');
+    $this->call('Visitors');
   }
 }
